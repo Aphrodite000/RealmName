@@ -9,8 +9,8 @@ public class Solution {
             String[] r = t[1].split("\\.");
             for (int j = 0; j <= r.length - 1; j++) {
                 //切割子数组
-                String[] sub = Arrays.copyOfRange(t, i, t.length);
-                //从i开始到t.length结束
+                String[] sub = Arrays.copyOfRange(r, j, r.length);
+                //从i开始到r.length结束
                 String d = String.join(".", sub);
                 int oldCount = map.getOrDefault(d, 0);
                 map.put(d, oldCount + n);
